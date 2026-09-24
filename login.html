@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | LotteryHub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/site.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-wrap">
+        <aside class="auth-side">
+            <a class="brand" href="index.html"><i class="fas fa-trophy me-2"></i>LotteryHub</a>
+            <div class="my-auto py-5">
+                <h2 class="mb-4">Welcome back!<br><span class="highlight">Your daily reward is waiting.</span></h2>
+                <div class="perk"><i class="fas fa-fire"></i><div><strong>Keep your streak going</strong><span>Log in every day for bigger daily rewards.</span></div></div>
+                <div class="perk"><i class="fas fa-ticket"></i><div><strong>Claim your free daily ticket</strong><span>Tonight's Free Daily Draw is at 09:00 PM.</span></div></div>
+                <div class="perk"><i class="fas fa-shield-heart"></i><div><strong>You're in control</strong><span>Limits, breaks and reminders are in Responsible Play.</span></div></div>
+            </div>
+            <div class="small" style="color:#7a8494;"><span class="age-badge me-1">18+</span> Play responsibly. Winning is never guaranteed.</div>
+        </aside>
+
+        <main class="auth-main">
+            <a href="index.html" class="small text-decoration-none mb-4 d-lg-none"><i class="fas fa-arrow-left me-1"></i>Back to website</a>
+            <h3>Log in</h3>
+            <p class="text-muted mb-4">New here? <a href="register.html">Create an account</a></p>
+
+            <div class="auth-tabs" role="tablist">
+                <button type="button" class="active" data-auth-tab="#loginPassword">Password</button>
+                <button type="button" data-auth-tab="#loginOtp">One-time code (OTP)</button>
+            </div>
+
+            <!-- Password login -->
+            <form id="loginPassword" data-go="user-panel.html">
+                <div class="mb-3">
+                    <label class="form-label" for="lpMobile">Mobile number</label>
+                    <div class="input-group"><span class="input-group-text">+92</span><input class="form-control" id="lpMobile" placeholder="3XX XXXXXXX" inputmode="tel" required autocomplete="tel"></div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="lpPass">Login password</label>
+                    <div class="input-group"><input type="password" class="form-control" id="lpPass" required autocomplete="current-password"><span class="input-group-text pw-toggle" data-toggle-pw="#lpPass" title="Show password"><i class="fas fa-eye"></i></span></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="lpRemember"><label class="form-check-label small" for="lpRemember">Keep me logged in</label></div>
+                    <a href="#" class="small" data-auth-tab="#loginOtp">Forgot password?</a>
+                </div>
+                <button class="btn btn-orange w-100 py-2">Log in</button>
+                <div class="form-text text-center mt-3"><i class="fas fa-lock me-1"></i>After 5 wrong tries, login is paused for 15 minutes.</div>
+            </form>
+
+            <!-- OTP login -->
+            <form id="loginOtp" class="d-none" data-go="user-panel.html">
+                <div class="mb-3" data-otp-step="1">
+                    <label class="form-label" for="loMobile">Mobile number</label>
+                    <div class="input-group"><span class="input-group-text">+92</span><input class="form-control" id="loMobile" placeholder="3XX XXXXXXX" inputmode="tel" autocomplete="tel"></div>
+                    <button type="button" class="btn btn-dark-custom w-100 py-2 mt-3" data-send-otp>Send code</button>
+                </div>
+                <div class="d-none" data-otp-step="2">
+                    <p class="small text-muted text-center">Enter the 6-digit code sent to your mobile.</p>
+                    <div class="otp-inputs mb-3">
+                        <input class="form-control" maxlength="1" inputmode="numeric" aria-label="Digit 1"><input class="form-control" maxlength="1" inputmode="numeric" aria-label="Digit 2"><input class="form-control" maxlength="1" inputmode="numeric" aria-label="Digit 3"><input class="form-control" maxlength="1" inputmode="numeric" aria-label="Digit 4"><input class="form-control" maxlength="1" inputmode="numeric" aria-label="Digit 5"><input class="form-control" maxlength="1" inputmode="numeric" aria-label="Digit 6">
+                    </div>
+                    <button class="btn btn-orange w-100 py-2">Verify &amp; log in</button>
+                    <div class="text-center small mt-3 text-muted">Didn't get it? <a href="#" data-send-otp>Resend</a> in <span data-resend>60</span>s</div>
+                </div>
+            </form>
+
+            <hr class="my-4">
+            <div class="text-center small text-muted">Staff member? <a href="admin-panel.html">Admin login</a></div>
+        </main>
+    </div>
+
+    <script>
+        // Demo behaviour only: the real login is handled by the server.
+        (function () {
+            const tabs = document.querySelectorAll('[data-auth-tab]');
+            tabs.forEach(t => t.addEventListener('click', e => {
+                e.preventDefault();
+                const target = t.dataset.authTab;
+                document.querySelectorAll('#loginPassword, #loginOtp').forEach(f => f.classList.toggle('d-none', '#' + f.id !== target));
+                document.querySelectorAll('.auth-tabs button').forEach(b => b.classList.toggle('active', b.dataset.authTab === target));
+            }));
+
+            document.querySelectorAll('[data-toggle-pw]').forEach(btn => btn.addEventListener('click', () => {
+                const input = document.querySelector(btn.dataset.togglePw);
+                input.type = input.type === 'password' ? 'text' : 'password';
+                btn.querySelector('i').className = input.type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
+            }));
+
+            let timer;
+            document.querySelectorAll('[data-send-otp]').forEach(btn => btn.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector('[data-otp-step="2"]').classList.remove('d-none');
+                document.querySelector('[data-otp-step="1"] button').classList.add('d-none');
+                const out = document.querySelector('[data-resend]');
+                let left = 60;
+                clearInterval(timer);
+                timer = setInterval(() => { out.textContent = --left; if (left <= 0) clearInterval(timer); }, 1000);
+                document.querySelector('.otp-inputs input').focus();
+            }));
+
+            const otp = [...document.querySelectorAll('.otp-inputs input')];
+            otp.forEach((input, i) => {
+                input.addEventListener('input', () => { if (input.value && otp[i + 1]) otp[i + 1].focus(); });
+                input.addEventListener('keydown', e => { if (e.key === 'Backspace' && !input.value && otp[i - 1]) otp[i - 1].focus(); });
+            });
+
+            document.querySelectorAll('form[data-go]').forEach(f => f.addEventListener('submit', e => {
+                e.preventDefault();
+                location.href = f.dataset.go;
+            }));
+        })();
+    </script>
+</body>
+</html>

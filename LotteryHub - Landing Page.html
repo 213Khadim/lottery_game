@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LotteryHub - Invest Smart, Win Big</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-orange: #FF9900;
+            --dark-gray: #232F3E;
+            --light-bg: #F5F5F5;
+            --white: #FFFFFF;
+            --text-gray: #555555;
+            --hover-orange: #FF8A00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            color: var(--text-gray);
+            background-color: var(--white);
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .navbar {
+            background-color: var(--dark-gray);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 12px 0;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-orange) !important;
+            letter-spacing: 1px;
+        }
+
+        .navbar-brand i {
+            margin-right: 8px;
+        }
+
+        .nav-link {
+            color: var(--white) !important;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-orange) !important;
+            transform: translateY(-2px);
+        }
+
+        .btn-login {
+            background-color: var(--primary-orange);
+            color: var(--white) !important;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .btn-login:hover {
+            background-color: var(--hover-orange);
+            transform: scale(1.05);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, #1a1f2e 100%);
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 1000px;
+            height: 1000px;
+            background: radial-gradient(circle, rgba(255, 153, 0, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-title .highlight {
+            color: var(--primary-orange);
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            margin-bottom: 40px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            border: none;
+            padding: 14px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--hover-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(255, 153, 0, 0.3);
+            color: var(--white);
+        }
+
+        .btn-secondary-custom {
+            background-color: transparent;
+            color: var(--primary-orange);
+            border: 2px solid var(--primary-orange);
+            padding: 12px 38px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary-custom:hover {
+            background-color: var(--primary-orange);
+            color: var(--white);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item h3 {
+            font-size: 28px;
+            color: var(--primary-orange);
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            color: #b0b0b0;
+            font-size: 14px;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            text-align: center;
+            color: var(--dark-gray);
+        }
+
+        .section-title .highlight {
+            color: var(--primary-orange);
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(255, 153, 0, 0.2);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-orange);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+
+        .step-card p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* ===== LOTTERY PLANS ===== */
+        .lottery-plans {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .plan-card {
+            background-color: var(--white);
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+        }
+
+        .plan-card:hover {
+            border-color: var(--primary-orange);
+            box-shadow: 0 12px 32px rgba(255, 153, 0, 0.15);
+            transform: translateY(-10px);
+        }
+
+        .plan-card.featured {
+            border-color: var(--primary-orange);
+            box-shadow: 0 12px 32px rgba(255, 153, 0, 0.15);
+            transform: scale(1.02);
+        }
+
+        .badge-featured {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-orange);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .investment-amount {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 10px;
+        }
+
+        .investment-label {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .reward-amount {
+            font-size: 28px;
+            color: var(--primary-orange);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .reward-label {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .plan-features {
+            text-align: left;
+            margin: 20px 0;
+            padding: 20px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .plan-features li {
+            list-style: none;
+            padding: 8px 0;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .plan-features li:before {
+            content: "✓ ";
+            color: var(--primary-orange);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .btn-participate {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 4px;
+            width: 100%;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .btn-participate:hover {
+            background-color: var(--hover-orange);
+            transform: scale(1.02);
+        }
+
+        /* ===== WINNERS SECTION ===== */
+        .winners-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        .winner-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .winner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .winner-badge {
+            background: linear-gradient(135deg, var(--primary-orange), var(--hover-orange));
+            color: var(--white);
+            padding: 15px;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 32px;
+        }
+
+        .winner-name {
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .winner-reward {
+            font-size: 24px;
+            color: var(--primary-orange);
+            font-weight: 700;
+            margin: 12px 0;
+        }
+
+        .winner-details {
+            color: var(--text-gray);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .testimonial-card {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 30px;
+            border-left: 4px solid var(--primary-orange);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .rating {
+            color: var(--primary-orange);
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .testimonial-text {
+            color: var(--text-gray);
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--dark-gray);
+            font-size: 14px;
+        }
+
+        /* ===== STATISTICS ===== */
+        .statistics-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--dark-gray) 0%, #1a1f2e 100%);
+            color: var(--white);
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--primary-orange);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #e0e0e0;
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        .accordion-button {
+            background-color: var(--white);
+            color: var(--dark-gray);
+            border: 1px solid #e0e0e0;
+            font-weight: 600;
+            padding: 15px 20px;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            box-shadow: none;
+        }
+
+        .accordion-button:focus {
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 0.25);
+        }
+
+        .accordion-body {
+            background-color: var(--light-bg);
+            color: var(--text-gray);
+            border-top: 1px solid #e0e0e0;
+            padding: 20px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: var(--dark-gray);
+            color: #b0b0b0;
+            padding: 50px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer h5 {
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer a:hover {
+            color: var(--primary-orange);
+            margin-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #444;
+            border-radius: 50%;
+            color: var(--primary-orange);
+            margin-bottom: 0;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            margin-left: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .navbar-brand {
+                font-size: 20px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .btn-primary-custom,
+            .btn-secondary-custom {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .plan-card.featured {
+                transform: scale(1);
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-trophy"></i>LotteryHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plans">Plans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#winners">Winners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                </ul>
+                <button class="btn-login">Login</button>
+                <a href="#" style="background-color: var(--primary-orange); color: white; padding: 8px 20px; border-radius: 4px; text-decoration: none; margin-left: 10px; font-weight: 600;">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">
+                        <span class="highlight">Invest Smart,</span> Win Big!
+                    </h1>
+                    <p class="hero-subtitle">
+                        Join thousands of users earning rewards through our secure lottery investment platform. Simple, transparent, and profitable.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary-custom">Start Investing Now</button>
+                        <button class="btn-secondary-custom">Learn More</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>50K+</h3>
+                            <p>Active Users</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>₹25Cr+</h3>
+                            <p>Rewards Distributed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Secure & Verified</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div style="text-align: center;">
+                        <div style="background: linear-gradient(135deg, var(--primary-orange), var(--hover-orange)); border-radius: 20px; padding: 40px; color: white;">
+                            <i class="fas fa-money-bill-wave" style="font-size: 80px; opacity: 0.3;"></i>
+                            <h3 style="margin-top: 20px; font-weight: 700;">Easy & Fast</h3>
+                            <p>Get started in minutes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <h2 class="section-title">How It <span class="highlight">Works</span></h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>Register Account</h4>
+                        <p>Create your account using mobile number and set a secure withdrawal password in just 2 minutes.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4>Add Funds</h4>
+                        <p>Deposit money into your wallet using multiple payment methods. Funds credited instantly.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>Choose Plan</h4>
+                        <p>Select from various lottery plans matching your investment budget.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h4>Participate</h4>
+                        <p>Invest in your selected lottery plan. Your balance will be deducted automatically.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">5</div>
+                        <h4>Lottery Opens</h4>
+                        <p>When lottery draws, winners are selected. Check results in your dashboard.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">6</div>
+                        <h4>Earn Rewards</h4>
+                        <p>Rewards credited instantly to your wallet. Withdraw anytime!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOTTERY PLANS ===== -->
+    <section class="lottery-plans" id="plans">
+        <div class="container">
+            <h2 class="section-title">Choose Your <span class="highlight">Plan</span></h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card">
+                        <div class="investment-amount">₹10</div>
+                        <div class="investment-label">Investment</div>
+                        <div class="reward-amount">₹100</div>
+                        <div class="reward-label">Potential Reward</div>
+                        <ul class="plan-features">
+                            <li>Instant Joining</li>
+                            <li>Quick Returns</li>
+                            <li>Low Risk</li>
+                        </ul>
+                        <button class="btn-participate">Participate Now</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card featured">
+                        <div class="badge-featured">MOST POPULAR</div>
+                        <div class="investment-amount">₹500</div>
+                        <div class="investment-label">Investment</div>
+                        <div class="reward-amount">₹5,000</div>
+                        <div class="reward-label">Potential Reward</div>
+                        <ul class="plan-features">
+                            <li>High Rewards</li>
+                            <li>Safe Investment</li>
+                            <li>Fast Processing</li>
+                        </ul>
+                        <button class="btn-participate">Participate Now</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card">
+                        <div class="investment-amount">₹1,000</div>
+                        <div class="investment-label">Investment</div>
+                        <div class="reward-amount">₹7,000</div>
+                        <div class="reward-label">Potential Reward</div>
+                        <ul class="plan-features">
+                            <li>Best Returns</li>
+                            <li>Premium Support</li>
+                            <li>Priority Processing</li>
+                        </ul>
+                        <button class="btn-participate">Participate Now</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card">
+                        <div class="investment-amount">₹3,000</div>
+                        <div class="investment-label">Investment</div>
+                        <div class="reward-amount">₹10,000</div>
+                        <div class="reward-label">Potential Reward</div>
+                        <ul class="plan-features">
+                            <li>Excellent Returns</li>
+                            <li>24/7 Support</li>
+                            <li>VIP Access</li>
+                        </ul>
+                        <button class="btn-participate">Participate Now</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card">
+                        <div class="investment-amount">₹10,000</div>
+                        <div class="investment-label">Investment</div>
+                        <div class="reward-amount">₹30,000</div>
+                        <div class="reward-label">Potential Reward</div>
+                        <ul class="plan-features">
+                            <li>Premium Returns</li>
+                            <li>Dedicated Manager</li>
+                            <li>Elite Membership</li>
+                        </ul>
+                        <button class="btn-participate">Participate Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WINNERS SECTION ===== -->
+    <section class="winners-section" id="winners">
+        <div class="container">
+            <h2 class="section-title">Recent <span class="highlight">Winners</span></h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="winner-card">
+                        <div class="winner-badge">🏆</div>
+                        <div class="winner-name">Rajesh Kumar</div>
+                        <div class="winner-reward">₹7,000</div>
+                        <div class="winner-details">
+                            <p><strong>Plan:</strong> ₹1,000</p>
+                            <p><strong>Date:</strong> 22 Sep 2026</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="winner-card">
+                        <div class="winner-badge">🎉</div>
+                        <div class="winner-name">Priya Singh</div>
+                        <div class="winner-reward">₹5,000</div>
+                        <div class="winner-details">
+                            <p><strong>Plan:</strong> ₹500</p>
+                            <p><strong>Date:</strong> 21 Sep 2026</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="winner-card">
+                        <div class="winner-badge">⭐</div>
+                        <div class="winner-name">Amit Patel</div>
+                        <div class="winner-reward">₹10,000</div>
+                        <div class="winner-details">
+                            <p><strong>Plan:</strong> ₹3,000</p>
+                            <p><strong>Date:</strong> 20 Sep 2026</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="winner-card">
+                        <div class="winner-badge">💎</div>
+                        <div class="winner-name">Sneha Desai</div>
+                        <div class="winner-reward">₹30,000</div>
+                        <div class="winner-details">
+                            <p><strong>Plan:</strong> ₹10,000</p>
+                            <p><strong>Date:</strong> 19 Sep 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials-section" id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Users <span class="highlight">Say</span></h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "LotteryHub is amazing! Easy to use, transparent, and I've already won twice. The support team is very helpful."
+                        </p>
+                        <div class="testimonial-author">- Rahul Verma</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Best investment platform I've used. The rewards are genuine and withdrawals are instant. Highly recommended!"
+                        </p>
+                        <div class="testimonial-author">- Neha Sharma</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "I was skeptical at first, but LotteryHub proved to be legitimate and profitable. Already referred 5 friends!"
+                        </p>
+                        <div class="testimonial-author">- Vikram Singh</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATISTICS ===== -->
+    <section class="statistics-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-box">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-box">
+                        <div class="stat-number">₹25Cr+</div>
+                        <div class="stat-label">Rewards Given</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-box">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Lotteries Completed</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-box">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">User Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Is LotteryHub safe and secure?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, LotteryHub is 100% secure. We use bank-level encryption, verified payment gateways, and transparent operations. All transactions are logged and auditable.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How much can I earn?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Earnings depend on the plan you choose. We offer plans from ₹10 investment (₹100 reward) up to ₹10,000 investment (₹30,000 reward). The more you invest, the higher your potential returns.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    How do I withdraw my earnings?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Withdrawals are simple. Go to your dashboard, click "Withdraw," enter the amount, select your payment method, and confirm with your withdrawal password. Funds are transferred within 24 hours.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What payment methods are accepted?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We accept UPI, Bank Transfer, Debit Card, Credit Card, and Digital Wallets. Choose the method that's most convenient for you.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Can I participate in multiple plans simultaneously?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! You can invest in multiple plans at the same time. This gives you more chances to win and increase your earnings.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    Is there a minimum withdrawal amount?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The minimum withdrawal amount is ₹100. You can withdraw as frequently as you want, and there are no hidden charges.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5><i class="fas fa-trophy"></i> LotteryHub</h5>
+                    <p style="font-size: 14px; color: #b0b0b0;">Your trusted partner in secure lottery investments with genuine rewards and transparent operations.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <a href="#">About Us</a>
+                    <a href="#">How It Works</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Legal</h5>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Withdrawal Policy</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Support</h5>
+                    <a href="#">Support Center</a>
+                    <a href="#">Contact Support</a>
+                    <a href="#">Email: support@lotteryhub.com</a>
+                    <a href="#">Call: +91-XXX-XXX-XXXX</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LotteryHub. All rights reserved. | Secure • Transparent • Rewarding</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

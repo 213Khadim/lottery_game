@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LotteryHub - Join a Draw, Get Rewarded</title>
+    <meta name="description" content="Pick a lottery plan, join the draw and get the plan's prize if your ticket wins. Clear odds, auditable draws, free daily rewards and responsible-play tools.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/site.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== NOTICE ===== -->
+    <div class="notice-bar">
+        <span class="age-badge me-1">18+</span> For adults only. Draws are based on chance and most tickets do not win. <strong>Play within your limits.</strong> <a href="#responsible">Responsible play tools</a>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home"><i class="fas fa-trophy"></i>LotteryHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-label="Open menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plans">Lottery Plans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#winners">Winners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rewards">Rewards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+                <div class="d-flex gap-2 ms-lg-3">
+                    <a href="login.html" class="btn btn-outline-light-orange px-3">Login</a>
+                    <a href="register.html" class="btn btn-orange px-3">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Join a Lottery Plan and <span class="highlight">Get Rewarded</span> When Your Ticket Wins</h1>
+                    <p class="lead">Every plan shows its ticket price, prize, number of winners and odds before you pay. Draws are random and auditable. Plus free daily rewards, missions and games that never cost money.</p>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="register.html" class="btn btn-orange btn-lg px-4">Register Now</a>
+                        <a href="login.html" class="btn btn-outline-light-orange btn-lg px-4">Login</a>
+                    </div>
+                    <div class="trust">
+                        <span><i class="fas fa-scale-balanced"></i>Odds shown upfront</span>
+                        <span><i class="fas fa-file-shield"></i>Auditable draws</span>
+                        <span><i class="fas fa-shield-heart"></i>Spending limits &amp; breaks</span>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="featured-draw">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fd-label">Featured Draw</span>
+                            <span class="live-pill">OPEN</span>
+                        </div>
+                        <h3>Silver Plan #S-118</h3>
+                        <div class="prize">Rs. 5,000</div>
+                        <div class="small" style="color:#b0b0b0;">prize for each of 20 winners</div>
+                        <div class="cd-boxes" data-countdown="131400">
+                            <div><strong data-cd="d">01</strong><small>Days</small></div>
+                            <div><strong data-cd="h">12</strong><small>Hours</small></div>
+                            <div><strong data-cd="m">30</strong><small>Mins</small></div>
+                            <div><strong data-cd="s">00</strong><small>Secs</small></div>
+                        </div>
+                        <div class="meta"><span>Ticket price</span><strong>Rs. 500</strong></div>
+                        <div class="meta"><span>Odds per ticket</span><strong>1 in 25</strong></div>
+                        <div class="meta border-0"><span>Tickets sold</span><strong>312 / 500</strong></div>
+                        <div class="bar my-2"><span style="width: 62%;"></span></div>
+                        <a href="register.html" class="btn btn-orange w-100 mt-3 py-2">Join This Draw</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATISTICS ===== -->
+    <section class="stats-strip">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md"><div class="stat-box"><div class="n">2,184</div><div class="l">Registered Users</div></div></div>
+                <div class="col-6 col-md"><div class="stat-box"><div class="n">1,317</div><div class="l">Participants</div></div></div>
+                <div class="col-6 col-md"><div class="stat-box"><div class="n">Rs. 6.9L</div><div class="l">Rewards Distributed</div></div></div>
+                <div class="col-6 col-md"><div class="stat-box"><div class="n">5</div><div class="l">Active Plans</div></div></div>
+                <div class="col-12 col-md"><div class="stat-box"><div class="n">128</div><div class="l">Completed Lotteries</div></div></div>
+            </div>
+            <div class="stats-note"><i class="fas fa-database me-1"></i>Live figures from platform records · updated 24 Sep 2026, 09:00 AM</div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section" id="how">
+        <div class="container">
+            <h2 class="section-title">How It <span class="highlight">Works</span></h2>
+            <p class="section-sub">Seven simple steps from sign-up to withdrawal.</p>
+            <div class="steps">
+                <div class="step"><div class="s-num"><i class="fas fa-user-plus"></i></div><h6>Register</h6><p>Mobile number, OTP and a withdrawal password</p></div>
+                <div class="step"><div class="s-num"><i class="fas fa-wallet"></i></div><h6>Deposit</h6><p>JazzCash, Easypaisa or bank, approved by our team</p></div>
+                <div class="step"><div class="s-num"><i class="fas fa-ticket"></i></div><h6>Select a Plan</h6><p>Compare price, prize and odds</p></div>
+                <div class="step"><div class="s-num"><i class="fas fa-hand-pointer"></i></div><h6>Participate</h6><p>Price is deducted, your ticket number is issued</p></div>
+                <div class="step"><div class="s-num"><i class="fas fa-dice"></i></div><h6>Draw &amp; Result</h6><p>Random draw at the set time, streamed live</p></div>
+                <div class="step"><div class="s-num"><i class="fas fa-gift"></i></div><h6>Reward</h6><p>Winners get the plan's prize in their wallet</p></div>
+                <div class="step"><div class="s-num"><i class="fas fa-money-bill-transfer"></i></div><h6>Withdraw</h6><p>Request payout with your withdrawal password</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOTTERY PLANS ===== -->
+    <section class="section alt" id="plans">
+        <div class="container">
+            <h2 class="section-title">Lottery <span class="highlight">Plans</span></h2>
+            <p class="section-sub">Every number you need to decide is on the card. Buying more tickets raises your chance, but most tickets do not win.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card free">
+                        <div class="ribbon">FREE EVERY DAY</div>
+                        <div class="p-name">Free Daily Draw</div>
+                        <div class="p-price">Rs. 0</div>
+                        <div class="p-lbl">1 free ticket per verified member</div>
+                        <div class="p-prize">500 pts</div>
+                        <div class="p-lbl">Non-cash prize + badge</div>
+                        <ul><li><span>Winners</span><span>10 daily</span></li><li class="odds"><span>Odds</span><span>~1 in 180</span></li><li><span>Draw</span><span>Daily, 09:00 PM</span></li></ul>
+                        <a href="register.html" class="btn btn-outline-orange w-100 py-2">Get Free Ticket</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card">
+                        <div class="p-name">Starter Plan</div>
+                        <div class="p-price">Rs. 10</div>
+                        <div class="p-lbl">Ticket price</div>
+                        <div class="p-prize">Rs. 100</div>
+                        <div class="p-lbl">Prize if your ticket wins</div>
+                        <ul><li><span>Winners</span><span>50 of 1,000</span></li><li class="odds"><span>Odds</span><span>1 in 20</span></li><li><span>Next draw</span><span>24 Sep 2026</span></li></ul>
+                        <a href="register.html" class="btn btn-orange w-100 py-2">Participate</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card featured">
+                        <div class="ribbon">MOST POPULAR</div>
+                        <div class="p-name">Silver Plan</div>
+                        <div class="p-price">Rs. 500</div>
+                        <div class="p-lbl">Ticket price</div>
+                        <div class="p-prize">Rs. 5,000</div>
+                        <div class="p-lbl">Prize if your ticket wins</div>
+                        <ul><li><span>Winners</span><span>20 of 500</span></li><li class="odds"><span>Odds</span><span>1 in 25</span></li><li><span>Next draw</span><span>25 Sep 2026</span></li></ul>
+                        <a href="register.html" class="btn btn-orange w-100 py-2">Participate</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card">
+                        <div class="p-name">Gold Plan</div>
+                        <div class="p-price">Rs. 1,000</div>
+                        <div class="p-lbl">Ticket price</div>
+                        <div class="p-prize">Rs. 7,000</div>
+                        <div class="p-lbl">Prize if your ticket wins</div>
+                        <ul><li><span>Winners</span><span>10 of 300</span></li><li class="odds"><span>Odds</span><span>1 in 30</span></li><li><span>Next draw</span><span>28 Sep 2026</span></li></ul>
+                        <a href="register.html" class="btn btn-orange w-100 py-2">Participate</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card">
+                        <div class="p-name">Platinum Plan</div>
+                        <div class="p-price">Rs. 3,000</div>
+                        <div class="p-lbl">Ticket price</div>
+                        <div class="p-prize">Rs. 10,000</div>
+                        <div class="p-lbl">Prize if your ticket wins</div>
+                        <ul><li><span>Winners</span><span>5 of 200</span></li><li class="odds"><span>Odds</span><span>1 in 40</span></li><li><span>Opens</span><span>30 Sep 2026</span></li></ul>
+                        <a href="register.html" class="btn btn-outline-orange w-100 py-2">Remind Me</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="plan-card">
+                        <div class="p-name">Diamond Plan</div>
+                        <div class="p-price">Rs. 10,000</div>
+                        <div class="p-lbl">Ticket price</div>
+                        <div class="p-prize">Rs. 30,000</div>
+                        <div class="p-lbl">Prize if your ticket wins</div>
+                        <ul><li><span>Winners</span><span>3 of 100</span></li><li class="odds"><span>Odds</span><span>1 in 34</span></li><li><span>Opens</span><span>05 Oct 2026</span></li></ul>
+                        <a href="register.html" class="btn btn-outline-orange w-100 py-2">Remind Me</a>
+                    </div>
+                </div>
+            </div>
+            <div class="odds-note"><i class="fas fa-circle-info me-1" style="color:#0d6efd;"></i><strong>How odds are worked out:</strong> number of winners ÷ number of tickets. Example: Silver has 20 winners from 500 tickets, so each ticket has a 1 in 25 chance. Ticket bundles, level-locked categories and custom-value Flexi tickets are available after you sign in.</div>
+        </div>
+    </section>
+
+    <!-- ===== JACKPOT + COMMUNITY ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="jackpot-hero">
+                        <div class="small text-uppercase fw-bold" style="letter-spacing: 2px; color:#b0b0b0;">Weekend Mega Draw · Jackpot</div>
+                        <div class="j-amount">Rs. 4,85,000</div>
+                        <div class="bar my-2"><span style="width: 97%;"></span></div>
+                        <div class="d-flex justify-content-between small mb-3" style="color:#b0b0b0;"><span>97% of Rs. 5,00,000 target</span><span>Draw in <span data-countdown="216000" style="color: var(--primary-orange); font-weight: 700;">2d 12h</span></span></div>
+                        <div class="calc"><i class="fas fa-calculator me-1"></i>Rs. 1,00,000 sponsor seed + 40% of 4,812 tickets × Rs. 200. One winner, estimated odds 1 in 6,000. Unlocks at Level 10.</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="goal-card">
+                        <div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-people-group fs-4" style="color: var(--primary-orange);"></i><h4 class="fw-bold m-0" style="color: var(--dark-gray);">Community Goal</h4></div>
+                        <p class="text-muted">When members complete 50,000 missions together this week, everyone who helped with at least 3 gets a mystery box.</p>
+                        <div class="fs-2 fw-bold" style="color: var(--dark-gray);">38,420 <span class="fs-6 text-muted fw-normal">/ 50,000</span></div>
+                        <div class="bar light my-2"><span style="width: 77%;"></span></div>
+                        <div class="small text-muted">Missions are free: log in, play trivia, join the free daily draw.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REWARDS & ENGAGEMENT ===== -->
+    <section class="section alt" id="rewards">
+        <div class="container">
+            <h2 class="section-title">More Than a <span class="highlight">Draw</span></h2>
+            <p class="section-sub">Earn points, badges and free tickets just by being active. None of these cost money, and points can't be turned into cash.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3"><div class="feature"><div class="f-icon bg-o"><i class="fas fa-calendar-check"></i></div><h5>Daily Rewards &amp; Streaks</h5><p>Log in each day for growing rewards, a free daily ticket and a reward calendar.</p></div></div>
+                <div class="col-md-6 col-lg-3"><div class="feature"><div class="f-icon bg-p"><i class="fas fa-bullseye"></i></div><h5>Missions &amp; Quests</h5><p>Daily, weekly and limited-time missions, treasure hunts and multi-step quests.</p></div></div>
+                <div class="col-md-6 col-lg-3"><div class="feature"><div class="f-icon bg-g"><i class="fas fa-gamepad"></i></div><h5>Free Skill Games</h5><p>Trivia, memory, reaction games, predictions and tournaments. Your skill decides the score.</p></div></div>
+                <div class="col-md-6 col-lg-3"><div class="feature"><div class="f-icon bg-b"><i class="fas fa-dharmachakra"></i></div><h5>Free Wheel &amp; Boxes</h5><p>A free spin every day, earned scratch cards and mystery boxes with published chances.</p></div></div>
+                <div class="col-md-6 col-lg-3"><div class="feature"><div class="f-icon bg-d"><i class="fas fa-medal"></i></div><h5>Levels, Badges &amp; Trophies</h5><p>Gain XP, unlock badges, frames, titles and special ticket categories.</p></div></div>
+                <div class="col-md-6 col-lg-3"><div class="feature"><div class="f-icon bg-o"><i class="fas fa-crown"></i></div><h5>VIP Loyalty</h5><p>Silver, Gold and Platinum tiers based on time and activity, never on money spent.</p></div></div>
+                <div class="col-md-6 col-lg-3"><div class="feature"><div class="f-icon bg-r"><i class="fas fa-store"></i></div><h5>Loyalty Store</h5><p>Swap points for vouchers, mobile top-ups, merchandise and digital items.</p></div></div>
+                <div class="col-md-6 col-lg-3"><div class="feature"><div class="f-icon bg-p"><i class="fas fa-user-group"></i></div><h5>Friends &amp; Teams</h5><p>Invite friends, team up for weekly targets and climb fair leaderboards.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WINNERS ===== -->
+    <section class="section" id="winners">
+        <div class="container">
+            <h2 class="section-title">Recent <span class="highlight">Winners</span></h2>
+            <p class="section-sub">Verified results, shown only with each winner's consent. Names are masked to protect privacy.</p>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="winner-table table-responsive">
+                        <table class="table">
+                            <thead><tr><th>Winner</th><th>Support ID</th><th>Plan</th><th>Ticket</th><th>Prize</th><th>Date</th></tr></thead>
+                            <tbody>
+                                <tr><td><span class="w-avatar">AR</span>A** R***</td><td>LH-10****5</td><td>Silver</td><td>Rs. 500</td><td class="prize">Rs. 5,000</td><td>21 Sep 2026</td></tr>
+                                <tr><td><span class="w-avatar" style="background: var(--dark-gray);">FK</span>F***** K***</td><td>LH-10****2</td><td>Silver</td><td>Rs. 500</td><td class="prize">Rs. 5,000</td><td>21 Sep 2026</td></tr>
+                                <tr><td><span class="w-avatar" style="background: linear-gradient(135deg,#6f42c1,#3b2a63);">HM</span>H**** M****</td><td>LH-10****7</td><td>Gold</td><td>Rs. 1,000</td><td class="prize">Rs. 7,000</td><td>18 Sep 2026</td></tr>
+                                <tr><td><span class="w-avatar" style="background: linear-gradient(135deg,#198754,#0b4d2f);">SN</span>S*** N****</td><td>LH-10****1</td><td>Starter</td><td>Rs. 10</td><td class="prize">Rs. 100</td><td>10 Sep 2026</td></tr>
+                                <tr><td><span class="w-avatar" style="background: linear-gradient(135deg,#0d6efd,#0a3d8f);">ZM</span>Z***** M***</td><td>LH-10****9</td><td>Platinum</td><td>Rs. 3,000</td><td class="prize">Rs. 10,000</td><td>02 Sep 2026</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="small text-muted mt-2"><i class="fas fa-file-shield me-1" style="color: var(--primary-orange);"></i>Every draw publishes its seed so anyone can check the result.</div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feed">
+                        <div class="d-flex justify-content-between align-items-center mb-2"><h6 class="m-0">Latest Results</h6><span class="live-pill">LIVE</span></div>
+                        <ul id="winnerFeed">
+                            <li><span class="w-avatar">UT</span><div>U**** T***<div class="t">Free Daily Draw · 2 min ago</div></div><span class="v">500 pts</span></li>
+                            <li><span class="w-avatar" style="background:#6f42c1;">MR</span><div>M***** R***<div class="t">Starter #T-401 · 1 hr ago</div></div><span class="v">Rs. 100</span></li>
+                            <li><span class="w-avatar" style="background:#198754;">BK</span><div>B**** K***<div class="t">Trivia Cup · yesterday</div></div><span class="v">Trophy</span></li>
+                            <li><span class="w-avatar" style="background:#0d6efd;">AY</span><div>A***** Y***<div class="t">FreshCo Giveaway · yesterday</div></div><span class="v">Voucher</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EVENTS ===== -->
+    <section class="section pt-0">
+        <div class="container">
+            <div class="event-strip">
+                <i class="fas fa-baseball-bat-ball deco"></i>
+                <span class="live-pill mb-2">LIVE EVENT</span>
+                <h3 class="mt-2">Cricket Season Carnival</h3>
+                <p class="mb-3" style="color: rgba(255,255,255,0.85); max-width: 620px;">Daily cricket trivia, free match predictions and a collectible Cricket Legends album. 20 Sep – 05 Oct. Coming up: New Year 2027, Ramadan and Eid events with themed badges and frames.</p>
+                <a href="register.html" class="btn btn-orange px-4">Join the event</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="section alt" id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Members <span class="highlight">Say</span></h2>
+            <p class="section-sub">Reviews come from registered members and are checked before they are published.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="review">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"I like that the odds are written on every plan. Withdrawal of my Silver prize reached JazzCash the next day."</p>
+                        <div class="who"><span class="w-avatar m-0">FK</span><div><strong>Fatima K.</strong><small>Verified member · 22 Sep 2026</small></div></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="review">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <p>"The daily trivia and free ticket are fun even when I don't buy anything. I set a monthly limit and it actually stops me."</p>
+                        <div class="who"><span class="w-avatar m-0" style="background: var(--dark-gray);">UT</span><div><strong>Usman T.</strong><small>Verified member · 19 Sep 2026</small></div></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="review">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
+                        <p>"Support answered my deposit question in an hour. Watching the live draw screen is exciting."</p>
+                        <div class="who"><span class="w-avatar m-0" style="background:#6f42c1;">SN</span><div><strong>Sana N.</strong><small>Verified member · 15 Sep 2026</small></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESPONSIBLE PLAY ===== -->
+    <section class="rg-section" id="responsible">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-4">
+                    <h2>Responsible Play</h2>
+                    <p style="color: rgba(255,255,255,0.85);">A lottery ticket is entertainment, not a way to earn money. We give you tools to stay in control from your first day.</p>
+                    <span class="age-badge">18+</span> <span class="small ms-1">Age verified with CNIC</span>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row g-3">
+                        <div class="col-sm-6"><div class="rg-tool"><i class="fas fa-gauge"></i><h6>Spending limits</h6><p>Daily, weekly and monthly caps with alerts at 80%.</p></div></div>
+                        <div class="col-sm-6"><div class="rg-tool"><i class="fas fa-mug-saucer"></i><h6>Take a break</h6><p>Pause deposits and paid tickets for 24 hours, 7 or 30 days.</p></div></div>
+                        <div class="col-sm-6"><div class="rg-tool"><i class="fas fa-ban"></i><h6>Self-exclusion</h6><p>Block paid play for 6 months to 5 years. It can't be undone early.</p></div></div>
+                        <div class="col-sm-6"><div class="rg-tool"><i class="fas fa-hourglass-half"></i><h6>Reality checks</h6><p>Regular reminders of time and money spent, plus monthly statements.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+            <p class="section-sub">Can't find your answer? <a href="#contact">Contact support</a>.</p>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="accordion" id="faqAcc">
+                        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">How do I register?</button></h2><div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body">Enter your full name and mobile number, set a login password and a separate withdrawal password, then confirm with the OTP we text you. Your username and Support ID are created automatically. You must be 18 or older.</div></div></div>
+                        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">How do deposits work?</button></h2><div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Send money by JazzCash, Easypaisa or bank transfer to the account shown, then submit the amount, reference number and a screenshot. Our finance team checks it, usually within a few hours, and the status changes from Pending to Approved or Rejected.</div></div></div>
+                        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">How are winners selected?</button></h2><div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">After entries close, a random draw uses a server seed (its fingerprint is published before the draw) plus a public seed. After the draw we publish the server seed, so anyone can re-run it and get the same winners. The draw is shown live in the app.</div></div></div>
+                        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">What are my chances of winning?</button></h2><div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Each plan shows its odds: winners ÷ tickets. For example, Silver has 20 winners out of 500 tickets, a 1 in 25 chance per ticket. That means 24 out of 25 tickets don't win. Only spend what you're comfortable losing.</div></div></div>
+                        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f5">When is a prize credited?</button></h2><div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Right after the draw. The plan's prize goes to your Main Wallet with a transaction reference, and you get a notification.</div></div></div>
+                        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f6">How do withdrawals and the withdrawal password work?</button></h2><div id="f6" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Choose an amount (minimum Rs. 100), a method and your account details, then confirm with your withdrawal password. It is separate from your login password and stored encrypted, so even our staff can't see it. Requests move from Pending to Processing to Approved.</div></div></div>
+                        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f7">Are points, badges and free games real money?</button></h2><div id="f7" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">No. Points, XP, tokens, badges and free-game prizes are non-cash. They can be used in the Loyalty Store or for free-entry draws, but they can't be withdrawn or swapped for cash.</div></div></div>
+                        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f8">How do I get help?</button></h2><div id="f8" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Open a ticket from the Support page in your account, email support@lotteryhub.com or call +92-300-0000000. We reply within 24 hours, and faster for withdrawal issues.</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section alt" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+            <p class="section-sub">Questions about deposits, draws or your account? We're here to help.</p>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="contact-card">
+                        <div class="contact-line"><i class="fas fa-envelope"></i><div><strong>Email</strong>support@lotteryhub.com</div></div>
+                        <div class="contact-line"><i class="fas fa-phone"></i><div><strong>Phone / WhatsApp</strong>+92-300-0000000</div></div>
+                        <div class="contact-line"><i class="fas fa-clock"></i><div><strong>Hours</strong>Every day, 9:00 AM – 11:00 PM (PKT)</div></div>
+                        <div class="contact-line mb-0"><i class="fas fa-location-dot"></i><div><strong>Office</strong>LotteryHub Pvt Ltd, Lahore, Pakistan</div></div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form class="contact-card" data-demo="Message sent. We'll reply within 24 hours.">
+                        <div class="row g-3">
+                            <div class="col-md-6"><label class="form-label" for="cName">Full name</label><input class="form-control" id="cName" required></div>
+                            <div class="col-md-6"><label class="form-label" for="cPhone">Mobile number</label><input class="form-control" id="cPhone" placeholder="03XX-XXXXXXX" required></div>
+                            <div class="col-md-6"><label class="form-label" for="cTopic">Topic</label><select class="form-select" id="cTopic"><option>General question</option><option>Deposit</option><option>Withdrawal</option><option>Draw / Result</option><option>Responsible play</option><option>Partnership / sponsorship</option></select></div>
+                            <div class="col-md-6"><label class="form-label" for="cId">Support ID <span class="fw-normal text-muted">(if registered)</span></label><input class="form-control" id="cId" placeholder="LH-XXXXXX"></div>
+                            <div class="col-12"><label class="form-label" for="cMsg">Message</label><textarea class="form-control" id="cMsg" rows="4" required></textarea></div>
+                        </div>
+                        <button class="btn btn-orange px-4 mt-3">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5><i class="fas fa-trophy me-1"></i>LotteryHub</h5>
+                    <p>Transparent lottery plans with published odds, auditable draws and tools that keep play fun and within limits.</p>
+                    <div class="social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Company</h5>
+                    <a href="#home">About Us</a>
+                    <a href="#how">How It Works</a>
+                    <a href="#winners">Winners</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h5>Legal</h5>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#responsible">Responsible Participation</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Withdrawal Policy</a>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Support</h5>
+                    <a href="#faq">Help Center / FAQ</a>
+                    <a href="login.html">Open a Ticket</a>
+                    <a href="mailto:support@lotteryhub.com">support@lotteryhub.com</a>
+                    <a href="tel:+923000000000">+92-300-0000000</a>
+                </div>
+            </div>
+            <div class="bottom">
+                <span>&copy; 2026 LotteryHub. All rights reserved.</span>
+                <span><span class="age-badge me-1">18+</span> Play responsibly. Winning is never guaranteed.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="demoToast" class="toast" role="status">
+            <div class="d-flex"><div class="toast-body fw-semibold" style="color: var(--dark-gray);"></div><button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/panel.js"></script>
+    <script src="assets/js/gamify.js"></script>
+    <script>
+        // Demo: new results slide into the "Latest Results" feed.
+        (function () {
+            const feed = document.getElementById('winnerFeed');
+            const samples = [
+                ['KA', 'K***** A***', 'Free Daily Draw', '500 pts'],
+                ['NR', 'N**** R***', 'Starter #T-402', 'Rs. 100'],
+                ['IH', 'I**** H*****', 'Memory Masters', 'Frame'],
+                ['RB', 'R*** B***', 'TechMart Draw', 'Earbuds']
+            ];
+            let i = 0;
+            setInterval(() => {
+                const [ini, name, draw, prize] = samples[i++ % samples.length];
+                const li = document.createElement('li');
+                li.innerHTML = '<span class="w-avatar"></span><div><span class="n"></span><div class="t"></div></div><span class="v"></span>';
+                li.querySelector('.w-avatar').textContent = ini;
+                li.querySelector('.n').textContent = name;
+                li.querySelector('.t').textContent = draw + ' · just now';
+                li.querySelector('.v').textContent = prize;
+                feed.prepend(li);
+                if (feed.children.length > 5) feed.lastElementChild.remove();
+            }, 6000);
+        })();
+    </script>
+</body>
+</html>
